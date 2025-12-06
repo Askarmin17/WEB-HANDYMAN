@@ -1,6 +1,7 @@
 {
   "name": "web-handyman-backend",
   "version": "1.0.0",
+  "description": "Backend API untuk WEB-HANDYMAN",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
