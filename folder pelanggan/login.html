@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HandyMan</title>
+    
+    <!-- Library CSS (Bootstrap & Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS Anda -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       
+    <section class="d-flex align-items-center min-vh-100 py-5">
+        <div class="container">
+            
+            <!-- Judul Halaman -->
+            <div class="row mb-4 text-center">
+                <div class="col-12">
+                    <p class="fw-bolder display-2 text-white mb-0 text-shadow">Login</p>
+                    <p class="text-white fs-5 text-shadow">
+                        Silakan pilih peran Anda untuk masuk
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card glass-card text-center">
+                        <div class="card-body p-4 p-md-5">
+                            
+                            <!-- TOMBOL PILIH PERAN (SWITCHER) -->
+                            <div class="role-switch-container mb-4">
+                                <button onclick="switchRole('pelanggan')" class="role-btn active" id="btn-pelanggan">
+                                    <i class="fa-solid fa-user me-2"></i> Pelanggan
+                                </button>
+                                <button onclick="switchRole('tukang')" class="role-btn" id="btn-tukang">
+                                    <i class="fa-solid fa-screwdriver-wrench me-2"></i> Mitra Tukang
+                                </button>
+                            </div>
+
+                            <!-- FORM LOGIN -->
+                            <form onsubmit="handleLogin(event)">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-light"><i class="fa-solid fa-envelope text-secondary"></i></span>
+                                    <input type="email" id="email" class="form-control bg-light" placeholder="Masukan email Anda" required>
+                                </div>
+
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text bg-light"><i class="fa-solid fa-lock text-secondary"></i></span>
+                                    <input type="password" id="password" class="form-control bg-light" placeholder="Masukan password" required>
+                                </div>
+
+                                <div class="text-center">
+                                    <button class="btn btn-primary w-100 btn-lg fw-bold shadow-sm" type="submit" id="btn-submit"> 
+                                        Masuk sebagai Pelanggan 
+                                    </button>
+                                </div>
+
+                                <p class="mt-4 mb-0 text-secondary">
+                                    Belum punya akun? <a href="Register.html" class="fw-bold text-decoration-none">Daftar Sekarang</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Logic JS Anda -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
